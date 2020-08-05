@@ -60,172 +60,172 @@
 
 
 
-###########目录结构描述
-├─backend // 后端代码
-│  │  .sequelizerc // `sequelize` 配置文件
-│  │  package-lock.json // 环境依赖具体信息
-│  │  package.json // 环境依赖
-│  │  tsconfig.json // `TypeScript` 配置文件
+###########目录结构描述  
+├─backend // 后端代码  
+│  │  .sequelizerc // `sequelize` 配置文件  
+│  │  package-lock.json // 环境依赖具体信息  
+│  │  package.json // 环境依赖  
+│  │  tsconfig.json // `TypeScript` 配置文件  
 │  │  
-│  └─src // 后端源码
-│      │  app.ts // 项目主入口文件，对静态资源代理，连接数据库，注册路由等
+│  └─src // 后端源码  
+│      │  app.ts // 项目主入口文件，对静态资源代理，连接数据库，注册路由等  
 │      │  
-│      ├─attachments // 评论相关资源
-│      │      logo.png
-│      │      upload_1debc8bfb7de326addc328b08b71d17f.png
-│      │      upload_2ff1b6956b998a8e867881e31b650fbf.png
-│      │      upload_35462bafd2fe69de74860f912da90c73.png
-│      │      upload_3e5c4f8d0ea5738fe9811afa4e14c683.png
-│      │      upload_4336b8b24c72f6d7e24eefe050beda7c.png
-│      │      upload_623badb6cc5d70a0686f52e826c78f62.png
-│      │      upload_6ff1e894da92b37be47e5153fba19020.png
-│      │      upload_7dcdf469829b8f34b9406b4404a7fe1f.png
-│      │      upload_7f92d4755c64a9a4b103da3ef73b20b3.png
-│      │      upload_c4a8a40b2d4f95e4bacd61ad04a1fc03.png
-│      │      upload_ca00206d6b5976457e95364ec5b48bc9.png
-│      │      upload_f01187302c3425f479040f53363b9a14.png
-│      │      upload_f682499d0335523278bc86bd113b6293.png
+│      ├─attachments // 评论相关资源  
+│      │      logo.png  
+│      │      upload_1debc8bfb7de326addc328b08b71d17f.png  
+│      │      upload_2ff1b6956b998a8e867881e31b650fbf.png  
+│      │      upload_35462bafd2fe69de74860f912da90c73.png  
+│      │      upload_3e5c4f8d0ea5738fe9811afa4e14c683.png  
+│      │      upload_4336b8b24c72f6d7e24eefe050beda7c.png  
+│      │      upload_623badb6cc5d70a0686f52e826c78f62.png  
+│      │      upload_6ff1e894da92b37be47e5153fba19020.png  
+│      │      upload_7dcdf469829b8f34b9406b4404a7fe1f.png  
+│      │      upload_7f92d4755c64a9a4b103da3ef73b20b3.png  
+│      │      upload_c4a8a40b2d4f95e4bacd61ad04a1fc03.png  
+│      │      upload_ca00206d6b5976457e95364ec5b48bc9.png  
+│      │      upload_f01187302c3425f479040f53363b9a14.png  
+│      │      upload_f682499d0335523278bc86bd113b6293.png  
 │      │      
-│      ├─configs 
-│      │      database.json // 连接数据库所需要的配置（包括测试，开发，生产等环境）
-│      │      index.ts // 项目配置以及数据库配置文件
+│      ├─configs  
+│      │      database.json // 连接数据库所需要的配置（包括测试，开发，生产等环境）  
+│      │      index.ts // 项目配置以及数据库配置文件  
 │      │      
-│      ├─controllers // 控制器，通过 `TypeScript` 的装饰器与路由进行绑定
-│      │      Board.ts // 面板路由
-│      │      BoardList.ts // 面板列表路由
-│      │      BoardListCard.ts // 卡片路由
-│      │      Comment.ts // 评论路由
-│      │      Test.ts // 测试路由
-│      │      User.ts // 用户路由
+│      ├─controllers // 控制器，通过 `TypeScript` 的装饰器与路由进行绑定  
+│      │      Board.ts // 面板路由  
+│      │      BoardList.ts // 面板列表路由  
+│      │      BoardListCard.ts // 卡片路由  
+│      │      Comment.ts // 评论路由  
+│      │      Test.ts // 测试路由  
+│      │      User.ts // 用户路由  
 │      │      
-│      ├─database 数据库
-│      │  ├─migrations // 迁移文件（创建表及表结构）
-│      │  │      initAttachment.js // 卡片附件
-│      │  │      initBoard.js // 任务面板
-│      │  │      initBoardList.js // 任务列表
-│      │  │      initBoardListCard.js // 任务卡片
-│      │  │      initCardAttachment.js // 卡片附件关联
-│      │  │      initComment.js // 评论
-│      │  │      initUser.js // 用户
+│      ├─database 数据库  
+│      │  ├─migrations // 迁移文件（创建表及表结构）  
+│      │  │      initAttachment.js // 卡片附件  
+│      │  │      initBoard.js // 任务面板  
+│      │  │      initBoardList.js // 任务列表  
+│      │  │      initBoardListCard.js // 任务卡片  
+│      │  │      initCardAttachment.js // 卡片附件关联  
+│      │  │      initComment.js // 评论  
+│      │  │      initUser.js // 用户  
 │      │  │      
-│      │  └─seeders // 种子文件（生成数据）
-│      │          initAttachment.js // 卡片附件
-│      │          initBoard.js // 任务面板
-│      │          initBoardList.js // 任务列表
-│      │          initBoardListCard.js // 任务卡片
-│      │          initCardAttachment.js // 卡片附件关联
-│      │          initComment.js // 评论
-│      │          initUser.js // 用户
+│      │  └─seeders // 种子文件（生成数据）  
+│      │          initAttachment.js // 卡片附件  
+│      │          initBoard.js // 任务面板  
+│      │          initBoardList.js // 任务列表  
+│      │          initBoardListCard.js // 任务卡片  
+│      │          initCardAttachment.js // 卡片附件关联  
+│      │          initComment.js // 评论  
+│      │          initUser.js // 用户  
 │      │          
-│      ├─middlewares // 中间件
-│      │      authorization.ts // 验证
+│      ├─middlewares // 中间件  
+│      │      authorization.ts // 验证  
 │      │      
-│      ├─models // 模型类
-│      │      Attachment.ts // 卡片附件
-│      │      Board.ts // 任务面板
-│      │      BoardList.ts // 任务列表
-│      │      BoardListCard.ts // 任务卡片
-│      │      CardAttachment.ts // 卡片附件关联
-│      │      Comment.ts // 评论
-│      │      User.ts // 用户
+│      ├─models // 模型类  
+│      │      Attachment.ts // 卡片附件  
+│      │      Board.ts // 任务面板  
+│      │      BoardList.ts // 任务列表  
+│      │      BoardListCard.ts // 任务卡片  
+│      │      CardAttachment.ts // 卡片附件关联  
+│      │      Comment.ts // 评论  
+│      │      User.ts // 用户  
 │      │      
-│      ├─types // 类型声明文件
-│      │      global.d.ts
-│      │      koa.ext.d.ts
+│      ├─types // 类型声明文件  
+│      │      global.d.ts  
+│      │      koa.ext.d.ts  
 │      │      
-│      └─validators // 验证类
-│              Board.ts //  任务面板
-│              BoardList.ts // 任务列表
-│              BoardListCard.ts // 任务卡片
-│              Comment.ts // 评论
-│              CustomValidationDecorators.ts // 自定义验证装饰器
-│              User.ts // 用户
+│      └─validators // 验证类  
+│              Board.ts //  任务面板  
+│              BoardList.ts // 任务列表  
+│              BoardListCard.ts // 任务卡片  
+│              Comment.ts // 评论  
+│              CustomValidationDecorators.ts // 自定义验证装饰器  
+│              User.ts // 用户  
 │              
-└─frontend // 前端代码
-    └─vueapp
-        │  .browserslistrc
-        │  .env.development
-        │  .gitignore
-        │  babel.config.js
-        │  package-lock.json
-        │  package.json
+└─frontend // 前端代码  
+    └─vueapp  
+        │  .browserslistrc  
+        │  .env.development  
+        │  .gitignore  
+        │  babel.config.js  
+        │  package-lock.json  
+        │  package.json  
         │  README.md // help
-        │  vue.config.js
-        │  yarn.lock
+        │  vue.config.js  
+        │  yarn.lock  
         │  
-        ├─public // 资源文件
-        │      favicon.ico
-        │      index.html
+        ├─public // 资源文件  
+        │      favicon.ico  
+        │      index.html  
         │      
-        └─src // 源码
-            │  App.vue // 主组件
-            │  main.js // 项目主入口
+        └─src // 源码  
+            │  App.vue // 主组件  
+            │  main.js // 项目主入口  
             │  
-            ├─api // 接口
-            │      index.js
+            ├─api // 接口  
+            │      index.js  
             │      
-            ├─assets // 资源
-            │  │  logo.png
+            ├─assets // 资源  
+            │  │  logo.png  
             │  │  
-            │  ├─css // 样式
-            │  │  │  css.css
+            │  ├─css // 样式  
+            │  │  │  css.css  
             │  │  │  
-            │  │  └─fonts // 字体
-            │  │          trellicons-iefix.eot
-            │  │          trellicons.eot
-            │  │          trellicons.ttf
-            │  │          trellicons.woff
+            │  │  └─fonts // 字体  
+            │  │          trellicons-iefix.eot  
+            │  │          trellicons.eot  
+            │  │          trellicons.ttf  
+            │  │          trellicons.woff  
             │  │          
-            │  └─images // 图片
-            │          header-loading-logo.gif
-            │          header-logo-2x.png
-            │          lef-large.svg
-            │          loading.gif
-            │          right-large.svg
-            │          trello-logo-blue.svg
+            │  └─images // 图片  
+            │          header-loading-logo.gif  
+            │          header-logo-2x.png  
+            │          lef-large.svg  
+            │          loading.gif  
+            │          right-large.svg  
+            │          trello-logo-blue.svg  
             │          
-            ├─components // 组件
-            │  │  TCard.vue
-            │  │  TComment.vue
-            │  │  THeader.vue
-            │  │  TList.vue
-            │  │  TPagination.vue
-            │  │  TPopup.vue
-            │  │  TPopupMenu.vue
+            ├─components // 组件  
+            │  │  TCard.vue  
+            │  │  TComment.vue  
+            │  │  THeader.vue  
+            │  │  TList.vue  
+            │  │  TPagination.vue  
+            │  │  TPopup.vue  
+            │  │  TPopupMenu.vue  
             │  │  
-            │  └─TMessage
-            │          TMessage.js
-            │          TMessage.vue
+            │  └─TMessage  
+            │          TMessage.js  
+            │          TMessage.vue  
             │          
-            ├─filters
-            │      dateTime.js
+            ├─filters  
+            │      dateTime.js  
             │      
-            ├─router // 路由文件
-            │      index.js
+            ├─router // 路由文件  
+            │      index.js  
             │      
-            ├─store // 数据管理文件
-            │  │  index.js
+            ├─store // 数据管理文件  
+            │  │  index.js  
             │  │  
-            │  ├─board
-            │  │      index.js
+            │  ├─board  
+            │  │      index.js  
             │  │      
-            │  ├─card
-            │  │      index.js
+            │  ├─card  
+            │  │      index.js  
             │  │      
-            │  ├─comment
-            │  │      index.js
+            │  ├─comment  
+            │  │      index.js  
             │  │      
-            │  ├─list
-            │  │      index.js
+            │  ├─list  
+            │  │      index.js  
             │  │      
-            │  └─user
-            │          index.js
+            │  └─user  
+            │          index.js  
             │          
-            └─views // 视图文件
-                    Board.vue
-                    Card.vue
-                    Home.vue
-                    Login.vue
-                    NotFound.vue
-                    Register.vue
+            └─views // 视图文件  
+                    Board.vue  
+                    Card.vue  
+                    Home.vue  
+                    Login.vue  
+                    NotFound.vue  
+                    Register.vue  
                     
